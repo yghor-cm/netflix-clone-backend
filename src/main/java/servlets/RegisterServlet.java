@@ -5,7 +5,6 @@ import controller.UsuarioController;
 import model.Erro;
 import model.Usuario;
 
-import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -14,7 +13,7 @@ import java.io.IOException;
 public class RegisterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws IOException {
 
         Gson gson = new Gson();
         Usuario newUser = gson.fromJson(request.getReader(), Usuario.class);

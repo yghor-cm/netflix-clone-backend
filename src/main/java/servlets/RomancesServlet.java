@@ -3,7 +3,6 @@ package servlets;
 import api.CategoryUtils;
 import api.MovieAPI;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -15,7 +14,7 @@ public class RomancesServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws IOException {
         MovieAPI movieAPI = MovieAPI.getInstance();
         String categoryPath = CategoryUtils.getCategoryPath("romances");
         String jsonResponse = movieAPI.getMovies(categoryPath);

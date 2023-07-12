@@ -43,6 +43,7 @@ public class MovieAPI {
             HttpGet request = new HttpGet(url);
             HttpResponse response = httpClient.execute(request);
             String jsonResponse = EntityUtils.toString(response.getEntity());
+            System.out.println(jsonResponse);
             return jsonResponse;
         } catch (IOException e) {
             System.out.println("Error getMovies: " + e.getMessage());
